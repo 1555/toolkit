@@ -1,0 +1,46 @@
+<?php
+
+//$prefix =  $this->baseUrl();
+$prefix =  $_SERVER['SCRIPT_NAME'];
+$pageTitle = $this->escape(stripslashes($this->pageTitle));
+if (!$form = $this->form) {
+    require_once APPLICATION_PATH . '/modules/alerts/forms/AlertEdit.php';
+    $form = new Alerts_Forms_AlertEdit();
+}
+
+//var_dump($this->date);
+
+//$
+
+
+/*$this->view->id = $this->view->escape(stripslashes($alert['id']));
+$this->view->date = $this->view->escape(stripslashes($alert['date']));
+$this->view->promotitle = $this->view->escape(stripslashes($alert['promotitle']));
+$this->view->promocopy  = $this->view->escape(stripslashes($alert['promocopy']));
+$this->view->promolink  = $this->view->escape(stripslashes($alert['promolink']));*/
+
+
+
+$form->setMethod('post')
+    ->setAction($prefix.'/alerts/index/edit/id/'.$this->id)
+	->setAttrib('id', 'alert');
+	
+//$this->form->setCampaigns($this->campaigns); //$this->view->campaigns
+//$this->form->setGuests($this->guests);
+//$this->form->removeDecorator('DtDdWrapper'); 
+//$this->form->_init(); //$this->view->campaigns
+
+//$this->form->setGuests($this->guests); 
+$this->form->date->setValue($this->date);
+$this->form->banner_a_campaign_id->setValue($this->banner_a_campaign_id);
+$this->form->banner_b_campaign_id->setValue($this->banner_b_campaign_id);
+$this->form->promotitle->setValue($this->promotitle);
+$this->form->promocopy->setValue($this->promocopy);
+$this->form->promolink->setValue($this->promolink);
+
+echo $form;
+
+
+
+?>
+

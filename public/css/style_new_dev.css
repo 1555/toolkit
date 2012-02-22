@@ -1,0 +1,223 @@
+/* Universal selectors */
+
+/* HTML5 elemnets selectors */
+
+header, footer, aside, nav, article{
+	 display:block;
+ }
+ 
+
+header {
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	/*font-size:x-large;*/
+	padding:10px 0px 0 10px;
+ 	height:40px;
+ 	background:#26475a;
+ 	color: #999999;
+ }
+
+footer {
+	width:960px;
+ height:25px;
+ background:#c0c0c0;
+ margin:0px;
+ 
+ color: #333333;
+ border:solid black;
+ border-width:1px 0 0 0;
+ margin:0;
+ }
+ 
+ nav {
+	padding: 5px 0 5px 5px;
+ height:25px;
+background:#ffffff;
+ color:#B8B8B8;
+ border:solid #000000;	
+ border-width:1px 0 1px 0;
+ }
+
+/* Element selectors */
+
+body {
+ margin:20px;
+ font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+ font-size:10px;
+ background:#CCCC99;
+ color: #333333;
+ text-align:center;
+ padding:0;
+ 
+}
+
+ h1 {
+	 height:25px;
+ }
+
+
+h3, p {
+ margin:0;
+ padding:15px;
+ }
+ 
+
+
+h4 {
+ margin:0; 
+ padding: 5px 0;
+ }
+ 
+  a{
+ 	
+	color:#9B9B9B;
+ }
+ 
+
+ 
+ ol{
+ 	list-style:none;
+
+ }
+ 
+
+ 
+ radio{
+ 	align:right;
+ }
+
+
+ footer p{
+	 color:#999;
+	 padding:5px;
+ }
+
+ 
+ul{
+ 	margin: 0;
+	padding: 0;
+	list-style-type:none;
+	list-style-image:none;
+ }
+ 
+ 
+ 
+ nav li{
+ 	display:inline;
+ }
+ 
+dd{
+ 	display:inline;
+ }
+ 
+ dl{
+ 	margin: 0;
+	padding: 0;
+	list-style-type:none;
+	list-style-image:none;
+ }
+
+
+
+ 
+
+/* Class, Attribute and Pseudo selectors */
+
+  a:active{color:#ffffff;}
+  a:hover{color:#DD7700;}
+  a:vistited{color:#BA2121;}
+
+/* table cells */
+ .odd{
+ 	background-color:#808080;
+ }
+ 
+ .even{
+ 	background-color:#CCCCCC;
+ }
+ 
+ .even td, th{
+ 	padding:5px;
+ }
+ 
+ .button{
+ 	margin-bottom:15px;
+ }
+
+
+/* IDselectors */
+
+/* centralising div */
+#outer {
+	background-color:#FFFFFF;
+	margin:20px;
+ text-align:left;
+
+ width:960px;
+ margin:auto;
+ }
+ 
+ #loginNav {
+	width:100px;
+ float:right;
+ position: relative;
+ 	
+ }
+ 
+ #titlebox{
+ 	width:400px;
+	
+}
+ }
+ 
+  #table{
+ 	width:100%;
+	padding-bottom:30px;
+ }
+ 
+ #bodyblock {
+ position:relative;
+ background: #dcdcdc;
+ color: #333333;
+ width:650px;
+ padding:0;
+ }
+
+#column {
+ float:left;
+ background:#dcdcdc;
+ color: #333333;
+ width:200px;
+ }
+
+
+ 
+#bodyblock {
+ position:relative;
+ background: #dcdcdc;
+ color: #333333;
+ width:650px;
+ padding:0;
+ }
+
+#column {
+ float:left;
+ background:#dcdcdc;
+ color: #333333;
+ width:200px;
+ }
+ 
+
+
+#content {
+ width:auto;
+ padding:20px;
+  padding-top:50px;
+ background:#ffffff;
+ color: #333333;
+ border:solid #000000;	
+ border-width:0 0 0 0px;
+ text-align:left;
+ 
+ }
+
+

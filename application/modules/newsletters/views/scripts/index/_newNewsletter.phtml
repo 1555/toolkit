@@ -1,0 +1,13 @@
+<?php
+
+
+ require_once APPLICATION_PATH . '/modules/newsletters/forms/Newsletter.php';
+    $form = new Newsletters_Forms_Newsletter();
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+$form->setMethod('post')
+      ->setAction($prefix.'/newsletters/index/create/')
+	->setAttrib('id', 'newsletter');
+ echo $form ?>
+ 
+

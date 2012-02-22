@@ -1,0 +1,14 @@
+<?php
+
+
+ require_once APPLICATION_PATH . '/form/Venue.php';
+    $form = new MyWiki_Form_Venue();
+
+$form->setMethod('post')
+      ->setAction('/source/public/polls/index/edit/id/'.$this->pollid)
+	->setAttrib('id', 'venue');
+?>
+
+<p>Add a new venue by entering relevant information in the text area below.</p>
+<?php echo $form ?>
+

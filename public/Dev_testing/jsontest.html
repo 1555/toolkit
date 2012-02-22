@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>img{ height: 100px; float: left; }</style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <div id="images">
+
+</div><!-- http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=? -->
+<script>
+/*$.getJSON("http://quote.cnbc.com/quote-html-webservice/quote.htm?jsoncallback=?",
+  {
+    symbols: "goog",
+    realtime: "1",
+    output: "json",
+	noform: "1",
+  },
+  function(data) {
+	  alert('hello');
+    //$.each(data.items, function(i,item){
+     // $("<img/>").attr("src", item.media.m).appendTo("#images");
+     // if ( i == 3 ) return false;
+   // });
+  });*/
+  
+  $.ajax({
+   type: "GET",
+   //url: "http://quote.cnbc.com/quote-html-webservice/quote.htm",
+ //  data: "symbols=goog&realtime=1&output=json&noform=1",
+ //url: "http://search.cnbc.com/main.do?",
+ //data: "tickersymbols=goog&output=json&pagesize=5",
+  url: "http://toolkit.cnbceuropeshared.com/public/portfolio.php?",
+ data: "syms=goog&type=stocks",
+   dataType:"jsonp",
+   jsonp:"mycall",
+   crossDomain:true,
+   contentType:"ext/json-p",
+   success: function(msg){
+	   // console.log(msg);
+     alert( "Data Saved: " + msg );
+   },
+   contents: function(msg){
+	  //    console.log(msg);
+	   alert(msg);
+   },
+   error: function(msg){
+	 //  console.log(msg);
+     alert("Error: "+msg.statusText);
+	 msg.responseText;
+   },
+   callback: function(msg){
+	  //    console.log(msg);
+	    alert("CAllback:"+msg);
+   }
+   
+ });
+ 
+ function mycall(){
+	 alert('mycalled');
+ }
+  
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<?php
+$pageTitle = $this->escape(stripslashes($this->pageTitle));
+if (!$form = $this->form) {
+    require_once APPLICATION_PATH . 'campaigns/forms/ImageEdit.php';
+    $form = new Campaigns_Form_ImageEdit();
+}
+
+
+
+//$form->datemodified->setValue($this->datemodified);
+
+//$imgs = getAllImageForACampaign();
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+
+$form->setMethod('post')
+    ->setAction( $prefix.'/campaigns/index/imageedit/id/'.$this->id)
+	->setAttrib('id', 'image')
+	->setAttrib('imageid',$this->id);
+	
+$form->title->setValue($this->imagetitle);
+$form->alt->setValue($this->alt);
+$form->description->setValue($this->description);
+$form->imageid->setValue($this->id);
+	
+	
+	
+	
+	
+	
+
+echo $form;
+
+
+
+?>
+
+
+

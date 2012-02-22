@@ -1,0 +1,14 @@
+<?php if (!empty($this->errorMessage)): ?>
+<div class="error"><?php echo $this->errorMessage ?></div>
+<?php endif ?>
+
+<h2><?php echo $this->listingTitle ?></h2>
+<p><?php 
+//$wikiFilter = new MyWiki_Filter_WikiText();
+//echo $wikiFilter->filter($this->listingContent) ?></p>
+
+
+ 
+ <?  echo '<a href="'.$this->urlHome.'/index/edit/id/'.$this->venueId.'">Edit</a>'; ?>
+ 
+<?  echo '<a href="'.$this->urlHome.'/venues">Back to Polls</a>'; ?>

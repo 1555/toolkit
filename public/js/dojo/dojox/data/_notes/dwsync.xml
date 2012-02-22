@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AndOrReadStore.js" server="213.171.193.5/htdocs/" local="128994920190000000" remote="129292080000000000" />
+<file name="AndOrWriteStore.js" server="213.171.193.5/htdocs/" local="128994920190000000" remote="129292080000000000" />
+<file name="AppStore.js" server="213.171.193.5/htdocs/" local="128994920190000000" remote="129292080000000000" />
+<file name="AtomReadStore.js" server="213.171.193.5/htdocs/" local="128995017070000000" remote="129292080000000000" />
+<file name="CdfStore.js" server="213.171.193.5/htdocs/" local="128994991360000000" remote="129292080000000000" />
+<file name="ClientFilter.js" server="213.171.193.5/htdocs/" local="129029633740000000" remote="129292080000000000" />
+<file name="CouchDBRestStore.js" server="213.171.193.5/htdocs/" local="129005265410000000" remote="129292080000000000" />
+<file name="css.js" server="213.171.193.5/htdocs/" local="128599153430000000" remote="129292080000000000" />
+<file name="CssClassStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="CssRuleStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="CsvStore.js" server="213.171.193.5/htdocs/" local="128994904220000000" remote="129292080000000000" />
+<file name="dom.js" server="213.171.193.5/htdocs/" local="128726393710000000" remote="129292080000000000" />
+<file name="FileStore.js" server="213.171.193.5/htdocs/" local="128994904220000000" remote="129292080000000000" />
+<file name="FlickrRestStore.js" server="213.171.193.5/htdocs/" local="129083046750000000" remote="129292080000000000" />
+<file name="FlickrStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="GoogleFeedStore.js" server="213.171.193.5/htdocs/" local="128992467510000000" remote="129292080000000000" />
+<file name="GoogleSearchStore.js" server="213.171.193.5/htdocs/" local="128945875350000000" remote="129292080000000000" />
+<file name="HtmlStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="HtmlTableStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="ItemExplorer.js" server="213.171.193.5/htdocs/" local="128995005630000000" remote="129292080000000000" />
+<file name="JsonQueryRestStore.js" server="213.171.193.5/htdocs/" local="128805131740000000" remote="129292080000000000" />
+<file name="JsonRestStore.js" server="213.171.193.5/htdocs/" local="129067627960000000" remote="129292080000000000" />
+<file name="KeyValueStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="OpenSearchStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="OpmlStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="PersevereStore.js" server="213.171.193.5/htdocs/" local="128881308130000000" remote="129292080000000000" />
+<file name="PicasaStore.js" server="213.171.193.5/htdocs/" local="128885300910000000" remote="129292080000000000" />
+<file name="QueryReadStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="RailsStore.js" server="213.171.193.5/htdocs/" local="128995023210000000" remote="129292080000000000" />
+<file name="README" server="213.171.193.5/htdocs/" local="128728920230000000" remote="129292080000000000" />
+<file name="restListener.js" server="213.171.193.5/htdocs/" local="128871368570000000" remote="129292080000000000" />
+<file name="S3Store.js" server="213.171.193.5/htdocs/" local="128673638800000000" remote="129292080000000000" />
+<file name="ServiceStore.js" server="213.171.193.5/htdocs/" local="129041874630000000" remote="129292080000000000" />
+<file name="SnapLogicStore.js" server="213.171.193.5/htdocs/" local="128994959880000000" remote="129292080000000000" />
+<file name="StoreExplorer.js" server="213.171.193.5/htdocs/" local="128995021570000000" remote="129292080000000000" />
+<file name="WikipediaStore.js" server="213.171.193.5/htdocs/" local="128722101180000000" remote="129292080000000000" />
+<file name="XmlStore.js" server="213.171.193.5/htdocs/" local="128994991360000000" remote="129292080000000000" />
+</dwsync>

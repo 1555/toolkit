@@ -1,0 +1,43 @@
+<?php
+
+//echo 'hey there';
+//echo $this->newsletterBody;
+//echo 'hey there';
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+
+$pageTitle = $this->escape(stripslashes($this->pageTitle));
+if (!$form = $this->form) {
+    require_once APPLICATION_PATH . '/modules/newsletters/forms/NewsletterEdit.php';
+    $form = new Newsletters_Forms_NewslettersEdit();
+}
+
+
+
+$form->setMethod('post')
+    ->setAction($prefix.'/newsletters/index/edit/id/'.$this->id)
+	->setAttrib('id', 'newsletter');
+	
+//$this->form->setCampaigns($this->campaigns);
+
+//var_dump($this->paragraphs);
+
+$this->form->setParas($this->paragraphs);
+$this->form->_init(); 
+
+$this->form->date->setValue($this->date);
+
+echo $this->newsletterBody;
+//$this->form->banner_b_campaign_id->setValue($this->banner_b_campaign_id);
+$this->form->newsletterBody->setValue($this->newsletterBody);
+$this->form->newsletterTitle->setValue($this->newsletterTitle);
+
+
+
+echo $form;
+
+
+
+?>
+

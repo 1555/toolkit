@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Button.js" server="213.171.193.5/htdocs/" local="129085578400000000" remote="129320442000000000" />
+<file name="CheckBox.js" server="213.171.193.5/htdocs/" local="128999595960000000" remote="129320442600000000" />
+<file name="ComboBox.js" server="213.171.193.5/htdocs/" local="129072462720000000" remote="129320442600000000" />
+<file name="ComboButton.js" server="213.171.193.5/htdocs/" local="128702560650000000" remote="129320442600000000" />
+<file name="CurrencyTextBox.js" server="213.171.193.5/htdocs/" local="129044389190000000" remote="129320442600000000" />
+<file name="DateTextBox.js" server="213.171.193.5/htdocs/" local="129029593300000000" remote="129320442600000000" />
+<file name="DropDownButton.js" server="213.171.193.5/htdocs/" local="128702560650000000" remote="129320442600000000" />
+<file name="FilteringSelect.js" server="213.171.193.5/htdocs/" local="128999595960000000" remote="129320442600000000" />
+<file name="Form.js" server="213.171.193.5/htdocs/" local="128999595960000000" remote="129320442600000000" />
+<file name="HorizontalRule.js" server="213.171.193.5/htdocs/" local="128996561770000000" remote="129320442600000000" />
+<file name="HorizontalRuleLabels.js" server="213.171.193.5/htdocs/" local="128996561770000000" remote="129320442600000000" />
+<file name="HorizontalSlider.js" server="213.171.193.5/htdocs/" local="129010532400000000" remote="129320442600000000" />
+<file name="MappedTextBox.js" server="213.171.193.5/htdocs/" local="128702560650000000" remote="129320442600000000" />
+<file name="MultiSelect.js" server="213.171.193.5/htdocs/" local="128999595960000000" remote="129320442600000000" />
+<file name="NumberSpinner.js" server="213.171.193.5/htdocs/" local="128999595960000000" remote="129320443200000000" />
+<file name="NumberTextBox.js" server="213.171.193.5/htdocs/" local="129043878120000000" remote="129320443200000000" />
+<file name="RadioButton.js" server="213.171.193.5/htdocs/" local="128808708720000000" remote="129320443200000000" />
+<file name="RangeBoundTextBox.js" server="213.171.193.5/htdocs/" local="128702560650000000" remote="129320443200000000" />
+<file name="Select.js" server="213.171.193.5/htdocs/" local="129028292160000000" remote="129320443800000000" />
+<file name="SimpleTextarea.js" server="213.171.193.5/htdocs/" local="128996561770000000" remote="129320443800000000" />
+<file name="Slider.js" server="213.171.193.5/htdocs/" local="128771545590000000" remote="129320443800000000" />
+<file name="Textarea.js" server="213.171.193.5/htdocs/" local="128996561770000000" remote="129320443800000000" />
+<file name="TextBox.js" server="213.171.193.5/htdocs/" local="129040519000000000" remote="129320443800000000" />
+<file name="TimeTextBox.js" server="213.171.193.5/htdocs/" local="128996561770000000" remote="129320443800000000" />
+<file name="ToggleButton.js" server="213.171.193.5/htdocs/" local="128702560650000000" remote="129320443800000000" />
+<file name="ValidationTextBox.js" server="213.171.193.5/htdocs/" local="129028669930000000" remote="129320443800000000" />
+<file name="VerticalRule.js" server="213.171.193.5/htdocs/" local="128798754150000000" remote="129320443800000000" />
+<file name="VerticalRuleLabels.js" server="213.171.193.5/htdocs/" local="129180236430000000" remote="129320443800000000" />
+<file name="VerticalSlider.js" server="213.171.193.5/htdocs/" local="128999595960000000" remote="129320443800000000" />
+<file name="_DateTimeTextBox.js" server="213.171.193.5/htdocs/" local="129103495660000000" remote="129320443800000000" />
+<file name="_FormMixin.js" server="213.171.193.5/htdocs/" local="129032890480000000" remote="129320443800000000" />
+<file name="_FormSelectWidget.js" server="213.171.193.5/htdocs/" local="129022253600000000" remote="129320443800000000" />
+<file name="_FormWidget.js" server="213.171.193.5/htdocs/" local="129028669930000000" remote="129320443800000000" />
+<file name="_Spinner.js" server="213.171.193.5/htdocs/" local="128999595960000000" remote="129320443800000000" />
+</dwsync>

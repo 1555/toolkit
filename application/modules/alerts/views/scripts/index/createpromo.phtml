@@ -1,0 +1,29 @@
+<?php
+
+
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+
+$this->form->setMethod('post')->setAction($prefix.'/alerts/index/createpromo')->setAttrib('id', 'promo');
+ //$this->view->campaigns /$images
+$this->form->setImages($this->images); //$this->view->campaigns
+$this->form->_init(); //$this->view->campaigns	
+echo $this->form;
+//$this->form->setImages($this->images);
+
+
+
+
+//<?php  echo $prefix ?>
+<a href="<?php  echo $prefix ?>/alerts/index/previewpromo/?keepThis=true&TB_iframe=true&height=150&width=300" class="thickbox">Preview</a> 
+
+
+
+
+
+
+ 
+
+
+

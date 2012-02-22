@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="changelog" server="213.171.193.5//htdocs/" local="127282188700000000" remote="129446625600000000" />
+<file name="class.nusoap_base.php" server="213.171.193.5//htdocs/" local="127282185040000000" remote="129446625600000000" />
+<file name="class.soapclient.php" server="213.171.193.5//htdocs/" local="127282185040000000" remote="129446625600000000" />
+<file name="class.soap_fault.php" server="213.171.193.5//htdocs/" local="127118226540000000" remote="129446625600000000" />
+<file name="class.soap_parser.php" server="213.171.193.5//htdocs/" local="127271035440000000" remote="129446625600000000" />
+<file name="class.soap_server.php" server="213.171.193.5//htdocs/" local="127277870040000000" remote="129446625600000000" />
+<file name="class.soap_transport_http.php" server="213.171.193.5//htdocs/" local="127282185040000000" remote="129446626200000000" />
+<file name="class.soap_val.php" server="213.171.193.5//htdocs/" local="127066478300000000" remote="129446626200000000" />
+<file name="class.wsdl.php" server="213.171.193.5//htdocs/" local="127282185040000000" remote="129446626200000000" />
+<file name="class.wsdlcache.php" server="213.171.193.5//htdocs/" local="127238440560000000" remote="129446626200000000" />
+<file name="class.xmlschema.php" server="213.171.193.5//htdocs/" local="127251535780000000" remote="129446626200000000" />
+<file name="nusoap.php" server="213.171.193.5//htdocs/" local="128341640340000000" remote="129446626200000000" />
+<file name="nusoapmime.php" server="213.171.193.5//htdocs/" local="127263170680000000" remote="129446626200000000" />
+<file name="nusoap_php4.php" server="213.171.193.5//htdocs/" local="127282195460000000" remote="129446626200000000" />
+<file name="nusoap_php5.php" server="213.171.193.5//htdocs/" local="128341640340000000" remote="129446626200000000" />
+</dwsync>

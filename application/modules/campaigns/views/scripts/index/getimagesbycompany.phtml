@@ -1,0 +1,23 @@
+<?php if (!empty($this->errorMessage)): ?>
+<div class="error"><?php echo $this->errorMessage ?></div>
+<?php endif ?>
+
+<h2><?php echo $this->listingTitle ?></h2>
+<p><?php 
+//$wikiFilter = new MyWiki_Filter_WikiText();
+//echo $wikiFilter->filter($this->listingContent) ?></p>
+
+<?php // $form->setMethod('post')
+  //  ->setAction('$this->urlHome/source/public/campaigns/index/updatemultipleimages/'.$this->id)
+	//->setAttrib('id', 'campaign');?>
+
+<?php echo $this->ImagesTable(); 
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME']; 
+       ?>
+           <a href="<?php  echo $prefix; ?>/campaigns/index/uploadimages/company/<? echo $this->id; ?>">Upload images</a>
+
+
+ 
+

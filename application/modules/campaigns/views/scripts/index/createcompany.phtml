@@ -1,0 +1,22 @@
+<?php
+
+
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME']; 
+
+$this->form->setMethod('post')
+    ->setAction($prefix.'/campaigns/index/createcompany')
+	->setAttrib('id', 'campaign');
+ 
+//$this->form->setCampaigns($this->campaigns); //$this->view->campaigns
+$this->form->init(); //$this->view->campaigns
+
+echo $this->form;
+
+
+
+?> 
+
+
+

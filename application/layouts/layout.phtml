@@ -1,0 +1,92 @@
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+	<?php 
+	
+	echo $this->headMeta();
+	echo $this->headTitle(); 
+
+	 
+	////////////////////// STYLE DECLARATIONS //////////////////////////
+	// add style sheets to the headLink before writing them onto the page
+	
+		// seperate sheets for dev vs production
+	    if(APPLICATION_ENV == 'development'){ $relativeStyle = '/css/style_new_dev.css';}else{$relativeStyle = '/css/style_new.css';}
+		$this->headLink()->prependStylesheet($this->baseUrl().$relativeStyle);
+		// dojo related styles
+		$this->headLink()->prependStylesheet('http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/resources/dojo.css'); 
+		$this->headLink()->prependStylesheet('http://ajax.googleapis.com/ajax/libs/dojo/1.4/dijit/themes/tundra/tundra.css'); 
+		
+		// local light box styles
+		$this->headLink()->prependStylesheet($this->baseUrl().'/js/lightbox/css/lightbox.css'); 
+		$this->headLink()->prependStylesheet($this->baseUrl().'/css/thickbox.css'); 
+		echo $this->headLink();
+	
+	//////////////////// SCRIPT DECLARATIONS ////////////////////////////
+	if($this->dojo()->isEnabled()) {
+
+        
+
+                $this->dojo()->setDjConfigOption('usePlainJson',true)
+               ->requireModule('dijit._editor.plugins.ViewSource')
+               ->requireModule('dijit._editor.plugins.LinkDialog')
+                ->requireModule('dijit._editor.plugins.FontChoice')
+               ->requireModule('dijit._editor.plugins.FullScreen'); 
+	
+                 
+
+      echo $this->dojo();
+
+    }
+    $request = Zend_Controller_Front::getInstance()->getRequest();
+    $file_uri = $this->baseUrl().'/js/cnbc/' . $request->getModuleName() . '.js';
+    $this->headScript()->appendFile($file_uri); 
+	$this->headScript()->appendFile($this->baseUrl().'/js/lightbox/js/prototype.js');
+  $this->headScript()->appendFile($this->baseUrl().'/js/lightbox/js/scriptaculous.js?load=effects,builder');
+  $this->headScript()->appendFile($this->baseUrl().'/js/lightbox/js/lightbox.js');
+    $this->headScript()->appendFile($this->baseUrl().'/js/cnbc/ajax-connection.js');
+  $this->headScript()->appendFile($this->baseUrl().'/js/jQuery/jquery.js');
+  $this->headScript()->appendFile($this->baseUrl().'/js/jQuery/thickbox.js'); 
+    ?>
+	 <?=$this->headScript(); ?>
+     
+   
+	
+</head>
+<body class="tundra">
+<div id="outer">
+<?php 
+if($request->getActionName() == 'index'){
+	
+	$section = $request->getModuleName(); 
+}else {
+	$section = $request->getActionName(); 
+}
+?>
+<header>
+<div id="titlebox"><h1>
+<?php echo $this->title.' - '.$section; ?>
+</h1>
+</div>
+
+<div id="login">
+<?php // echo $this->partial('partials/login.phtml'); ?>
+</div>
+<nav>
+<?php  echo $this->navigation()->menu()->render(); ?>
+</nav>
+
+</header>
+
+
+<section id="content">
+
+<?php echo $this->layout()->content; ?>
+
+
+</section>
+<footer><p>Copyright CNBC Europe 2012</p></footer>
+</div>
+
+</body>
+</html>

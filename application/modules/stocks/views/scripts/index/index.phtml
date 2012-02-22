@@ -1,0 +1,30 @@
+<div id="content-body">
+        
+        <div id="wiki-content-main">
+            <?php // echo "hatstand";
+			
+			/*$this->buckets; 
+			
+			$perms      = array(
+        Zend_Service_Amazon_S3::S3_ACL_HEADER =>
+            Zend_Service_Amazon_S3::S3_ACL_PUBLIC_READ
+    );
+ 
+ $bucketName = 'cnbc.emea.indexs';
+
+    $ret = $s3->putObject(
+        $bucketName . '/ftse.txt',
+        'Some test data',
+        $perms
+    );
+*/
+		echo $this->stocksTable();
+		//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];	
+			
+			?>
+           
+        </div>
+        <a href="<?php echo $prefix; ?>/stocks/index/create">Add New Stocks</a>
+        <a href="<?php echo $prefix; ?>/stocks/index/submitall">Publish stocks list</a>
+    </div>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<nav>
+		<logout>
+			<label>Logout</label>
+			<module>default</module>
+			<controller>authentication</controller>
+			<action>logout</action>
+			<resource>default:authentication</resource>
+			<privilege>logout</privilege>
+		</logout>
+		
+		<login>
+			<label>Login</label>
+			<module>default</module>
+			<controller>authentication</controller>
+			<action>login</action>
+			<resource>default:authentication</resource>
+			<privilege>login</privilege>
+		</login> 
+		
+		<admin>
+			<label>Admin</label>
+			<module>admin</module>
+			<controller>index</controller>
+			<resource>admin:index</resource>
+			<privilege>index</privilege>
+			
+		</admin>
+		
+		<!--<signatures>
+			<label>Signatures</label>
+			<module>Signature</module>
+			<controller>index</controller>
+			<resource>signatures:index</resource>
+			<privilege>index</privilege>
+			
+		</signatures>-->
+		
+		
+	<!--	<polls>
+			<label>Web Polls</label>
+			<module>polls</module>
+			<controller>index</controller>
+			<resource>polls:index</resource>
+			<privilege>index</privilege>
+			<pages>
+				<viewpolls>
+					<label>View Polls</label>
+					<module>polls</module>
+					<controller>index</controller>
+					<action>list</action>
+				</viewpolls>
+				<createpoll>
+					<label>Create Poll</label>
+					<module>polls</module>
+					<controller>index</controller>
+					<action>create</action>
+				</createpoll>
+			</pages>
+		</polls>-->
+		
+		<campaigns>
+			<label>Campaigns</label>
+			<module>campaigns</module>
+			<controller>index</controller>
+			<resource>campaigns:index</resource>
+			<privilege>index</privilege>
+			<!--<pages>
+				<viewcampaigns>
+					<label>View Campaigns</label>
+					<module>campaigns</module>
+					<controller>index</controller>
+					<action>list</action>
+				</viewcampaigns>
+				<createcampaign>
+					<label>Create Campaign</label>
+					<module>campaigns</module>
+					<controller>index</controller>
+					<action>create</action>
+				</createcampaign>
+			</pages>-->
+		</campaigns>
+		
+		<companies>
+			<label>Companies</label>
+			<module>campaigns</module>
+			<controller>index</controller>
+			<action>companies</action>
+			<resource>campaigns:index</resource>
+			<privilege>companies</privilege>
+			
+		</companies>
+		
+		<alerts>
+			<label>Alerts</label>
+			<module>alerts</module>
+			<controller>index</controller>
+			<resource>alerts:index</resource>
+			<privilege>index</privilege>
+			
+		</alerts>
+		
+		
+		
+		<images>
+			<label>Images</label>
+			<module>campaigns</module>
+			<controller>index</controller>
+			<action>image</action>
+			<resource>campaigns:image</resource>
+			<privilege>image</privilege>
+			
+		</images>
+		
+		<promos>
+			<label>Promos</label>
+			<module>alerts</module>
+			<controller>index</controller>
+			<action>getallpromos</action>
+			<resource>alerts:promos</resource>
+			<privilege>promos</privilege>
+			
+		</promos>
+		
+		<newsletters>
+			<label>Newsletters</label>
+			<module>newsletters</module>
+			<controller>index</controller>
+			<action>index</action>
+			<params>
+				<order>DESC</order>
+			</params>
+			
+			<resource>newsletters:index</resource>
+			<privilege>index</privilege>
+			
+		</newsletters>
+		
+	<!--	<stocks>
+			<label>Stocks</label>
+			<module>stocks</module>
+			<controller>index</controller>
+			<action>index</action>
+			<resource>stocks:index</resource>
+			<privilege>index</privilege>
+			
+		</stocks> -->
+		
+	</nav>	
+</config>

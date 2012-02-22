@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JQuery JSONP</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+		
+	var syms = getSymbolsFromCookie();
+		
+	var symbolsParams = buildString(syms, '|'); // different services expect symbols in different formats
+	var storyParams = buildString(syms, ';'); // different services expect symbols in different formats
+		
+	$("#getStocks").click(grab('stocks','getStocksCallback', symbolsParams));
+	$("#getStories").click(grab('stories','getStoriesCallback', storyParams));
+	$("#getVideos").click(grab('videos','getVideosCallback',symbolsParams));
+	
+	
+	
+	function grab(type, callBack, syms){	
+            $.ajax({
+                url: 'http://toolkit.cnbceuropeshared.com/public/portfolio.php',
+                data: {syms: syms, type: type},
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                jsonpCallback: callBack,
+                success: function(){
+                    alert("success");
+                }
+            });
+		};
+		
+    });
+ 
+    function getStocksCallback(data){
+		alert(data);
+		alert('stcoks');
+		alert(eval(data.QuickQuoteResult.QuickQuote.change_pct));
+		var allSecs = data.split('*');
+	allSecs.splice(0,1);
+	//alert(allSecs.length);
+	//alert(allSecs);
+	for(var i=0;i<allSecs.length;i++){
+	sec = allSecs[i];
+	data = sec.split('#');
+	//alert(data);
+	if(data[3] == '0.00'){data[3] = 'UNCH'}
+	if(data[4] == '0.00'){data[4] = 'UNCH'}
+	//alert(data);
+	var tbl = document.getElementById('portfolio_table');
+	
+	
+	
+	var lastRow = tbl.rows.length;
+ 	var i= lastRow;
+	var row = tbl.insertRow(lastRow);
+			if(symbols == 'empty'){
+				
+			  stockkey = 'stock'+lastRow;
+			} else {
+				 var sym = trim(symbols[i]);
+			 if(sym.substr(7,sym.length) == data[2]){
+				 row.id = sym.substr(0,6);
+				// alert(sym.substr(0,6));
+				 }
+			 
+			stockkey = sym.substr(0,6); // gets to the name of the 
+			  
+			
+					
+			}
+			
+			if(data[3] < 0){
+				var arrow = 'http://media.cnbc.com/i/CNBC/CNBC_Images/componentbacks/watchlist_down.gif';
+			} else {
+				var arrow = 'http://media.cnbc.com/i/CNBC/CNBC_Images/componentbacks/watchlist_up.gif';
+			}
+			
+			var rt = trim(data[5]);
+			
+		//	alert(rt);
+			
+			if(rt == 'false'){
+			//	alert('in realclass');
+				var realclass = 'cnbc_show_Delayed_data';
+				
+			}else if(rt == 'true'){
+				var realclass = '';
+			}
+			
+		
+  
+  var tds = "<td><div id='idID1ED' class='h23 cnbc_wl_mrq_div bluefont cursor_pt ocomp' onmouseover='mrq_mouseOver(this);' onmouseout='mrq_mouseOut(this);'><div class='bluefont cFont cf11 h23 lh21 clr cursor_pt ocomp'><div align='left' style='width: 20%;' class='fL h23'><div class='"+realclass+" h23 uC cstrong padL10 lh21'><span id='sec'><a onclick='window.location='http://data.cnbc.com/quotes/"+data[2]+"'' onmouseover='cnbcwsod_loadchart(&quot;http://api-cdn.cnbc.com/api/chart/chart.asp?&amp;type=thumbnail&amp;charttype=overview&amp;timeframe=1month&amp;realtime=0&amp;symbol="+data[2]+"&amp;showHeader=&amp;showSidebar=0&amp;hideExchange=0&amp;changeOverTime=0&amp;showExtendedHours=0&quot;,&quot;http://data.cnbc.com/quotes/"+data[2]+"/tab/2&quot;,&quot;ID0E4F&quot;,&quot;"+data[1]+"&quot;);'>"+data[2]+"</a></span></div></div><div align='right' style='width: 15%;' class='fL h23'><div class='h23 padR10 lh21 blac'><span id='last'>"+data[0]+"</span></div></div><div align='center' style='width: 15%;' class='fL h23 lh8'><div style='padding-top: 5px;'><span id='WSODQ_.FTSE_CHANGEARROW_1_ID0E4F19751224'><img border='0' src='"+arrow+"'></span></div></div><div align='left' style='width: 18%;' class='fL h23 blac'><div class='h23 padL10 lh21'><span id='change'>"+data[3]+"</span></div></div><div align='left' class='fL h23 blac'><div class='h23 padL10 lh21'><span id='changepc'>"+data[4]+"</span></div></div><div align='right' class='fL h23 blac'><div class='h23 padL10 lh21'><span id='remove'><a onclick=removesec('"+data[2]+"',this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode,'"+stockkey+"'); style='float:right;'><img src='http://toolkit.cnbceuropeshared.com/public/images/delete.gif' style='float:right;'/></a></span></div></div></td>";
+  
+  row.innerHTML = tds;
+ }
+
+ 
+  if(status == 'noload'){
+	// alert('writ to cookie');
+			 document.cookie = "stock"+lastRow+"="+data[2]+"; expires=Thu, 2 Aug 2012 20:47:11 UTC; path=/";
+		}
+//
+    }
+	function getVideosCallback(data){
+		alert('vids');
+		alert(data);
+		alert(eval(data.QuickQuoteResult.QuickQuote.change_pct));
+		alert(data);
+		var allSecs = data.split('*');
+	allSecs.splice(0,1);
+	//alert(allSecs.length);
+	//alert(allSecs);
+	for(var i=0;i<allSecs.length;i++){
+		
+		sec = allSecs[i];
+	data = sec.split('#');
+		
+		var tbl = document.getElementById('videos_table');
+	
+	
+	
+	var lastRow = tbl.rows.length;
+	
+	var i= lastRow;
+	var row = tbl.insertRow(lastRow);
+	
+		var td = "<ul class='ll_bullet'><li class='featSecondary disptable cFont cf11 clr'><a href='"+data[0]+"' class='cstrong cf12'>"+data[1]+"</a> "+data[2]+"</li><li class='featSecondary disptable cFont cf11 clr'></li></ul>";
+		
+		 row.innerHTML = td;
+		
+	}
+	
+		
+		
+	}
+//
+
+	function getStoriesCallback(data){
+		alert('stories');
+		alert(data);
+		alert(eval(data.QuickQuoteResult.QuickQuote.change_pct));
+		var allSecs = data.split('*');
+	allSecs.splice(0,1);
+	//alert(allSecs.length);
+	//alert(allSecs);
+	for(var i=0;i<allSecs.length;i++){
+		
+		sec = allSecs[i];
+	data = sec.split('#');
+		
+		var tbl = document.getElementById('stories_table');
+	
+	
+	
+	var lastRow = tbl.rows.length;
+	
+	var i= lastRow;
+	var row = tbl.insertRow(lastRow);
+	var td = "<ul class='ll_bullet'><li class='featSecondary disptable cFont cf11 clr'><a href='"+data[0]+"' class='cstrong cf12'>"+data[1]+"</a> "+data[2]+"</li><li class='featSecondary disptable cFont cf11 clr'></li></ul>";
+		
+		 row.innerHTML = td;
+		
+	}
+//
+    }
+	
+
+function getSymbolsFromCookie(){
+	
+	var ca = document.cookie.split(';');
+	index0 = ca[0];
+	if(index0.substr(0,6) == 'PHPSES'){ca.shift()};
+	if(ca != ''){
+	//	alert('called anyway');
+	var symbols = [];
+	for(var i=0;i < ca.length;i++){
+		
+		var sec = ca[i].split('=');
+		se = sec[1];
+	if(se.length < 10){
+	symbols.push(sec[1]);
+	}
+	
+	}
+	return symbols;
+	
+	
+	
+	}
+
+	//grabstock(ca, symbolsParams,storyParams,'stocks', 'load');
+	
+}
+
+function buildString(symArray, del){
+//	alert(symArray.length);
+	var symstring = "";
+	for(var i = 0;i<symArray.length;i++){
+		//alert(i);
+		if(i < symArray.length-1){
+		symstring+=symArray[i]+del;
+		}else {
+			symstring+=symArray[i]+del;
+			//symstring+=symArray[i];
+		}
+	}
+	return symstring;
+}
+
+function getSymTxt(){
+//alert('getsym');
+	sym = document.forms['getmystock'].elements['input_symbol'].value;
+	//alert(sym);
+	var allsyms = document.cookie.split(';');
+	var double = checkForDouble(sym, allsyms );
+	var maxsyms = checkForMax(allsyms);
+	//alert(double);
+	//alert(maxsyms);
+	if(double == 'add' && maxsyms == 'add'){
+		//alert('go grab');
+	grabstock('empty', sym, 'empty', 'stocks','noload');
+	}
+	
+	
+}
+
+function checkForDouble(symtocheck, allsyms){
+	symtocheck = symtocheck.toUpperCase();
+	for(var i = 0; i < allsyms.length; i++){
+		symbol = allsyms[i];
+		//alert(symbol.substr(8, symbol.length));
+		//alert(symtocheck);
+		if(symbol.substr(8, symbol.length) == symtocheck){
+			return 'dontadd';
+		}
+	}
+	
+	return 'add';
+	
+}
+
+function checkForMax(){
+	
+	var allsyms = document.cookie.split(';');
+	if(allsyms.length < 6){
+		return 'add';
+	} else{
+		return 'dontadd';
+	}
+	
+}
+    </script>
+  </head>
+ 
+</html>

@@ -1,0 +1,30 @@
+
+
+<?php
+
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+
+
+$this->form->setMethod('post')
+    ->setAction($prefix.'/campaigns/index/editcompany/company/'.$this->id)
+	->setAttrib('id', 'campaign');
+ 
+//$this->form->setCampaigns($this->campaigns); //$this->view->campaigns
+//$this->form->init(); //$this->view->campaigns
+
+	//var_dump($this->company['companyname']);s
+
+$this->form->title->setValue($this->company['companyname']);
+
+echo $this->form;
+
+
+            
+
+
+?> 
+
+<a href="<?php  echo $prefix ?>/campaigns/index/companies">Back to companies</a>
+

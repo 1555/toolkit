@@ -1,0 +1,26 @@
+<?php
+$pageTitle = $this->escape(stripslashes($this->pageTitle));
+if (!$form = $this->form) {
+    require_once APPLICATION_PATH . '/modules/admin/forms/AdminEdit.php';
+    $form = new Admin_Forms_AdminEdit();
+}
+//$prefix =  $this->baseUrl();
+
+$prefix =  $_SERVER['SCRIPT_NAME'];
+
+
+$form->setMethod('post')
+    ->setAction($prefix.'/admin/index/edit/id/'.$this->id)
+	->setAttrib('id', 'admins');
+	
+$form->firstname->setValue($this->firstname);
+$form->lastname->setValue($this->lastname);
+$form->email->setValue($this->email);
+$form->role->setValue($this->role);
+
+echo $form;
+
+
+
+?>
+

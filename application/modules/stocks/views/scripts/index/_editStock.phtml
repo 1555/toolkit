@@ -1,0 +1,24 @@
+<?php
+$pageTitle = $this->escape(stripslashes($this->pageTitle));
+if (!$form = $this->form) {
+    require_once APPLICATION_PATH . '/modules/stocks/forms/StockEdit.php';
+    $form = new Stocks_Form_Stock_Edit();
+}
+
+
+//$form->stockname->setValue($this->stockname);
+
+
+
+
+$form->setMethod('post')
+    ->setAction('/public/modules/stocks/index/edit/id/'.$this->stockid)
+	->setAttrib('id', 'stock');
+ 
+
+echo $form;
+
+
+
+?>
+

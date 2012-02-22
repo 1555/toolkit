@@ -1,0 +1,36 @@
+
+
+
+<?php
+
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+ 
+ ?>
+
+<div id="banner" style="float:left;"></div>
+<div id="skyscraper" style="float:right;"></div>
+
+<?php 
+
+
+
+
+
+$this->form->setMethod('post')
+    ->setAction( $prefix."/campaigns/index/create/company/$this->id")
+	->setAttrib('id', 'campaign');
+	
+//var_dump($this->form);
+//$this->form->setCompanies($this->companies); //$this->view->campaigns
+$this->form->setImages($this->images); //$this->view->campaigns
+$this->form->setCompany($this->id); //$this->view->campaigns
+$this->form->_init(); //$this->view->campaigns
+
+echo $this->form;
+
+
+
+?> 
+

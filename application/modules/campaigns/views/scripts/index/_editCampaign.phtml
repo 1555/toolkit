@@ -1,0 +1,53 @@
+
+<?php
+
+ //$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+
+$pageTitle = $this->escape(stripslashes($this->pageTitle));
+if (!$form = $this->form) {
+    require_once APPLICATION_PATH . '/campaigns/forms/CampaignEdit.php';
+    $form = new Campaigns_Form_Campaign_Edit();
+}
+
+
+
+//$form->datemodified->setValue($this->datemodified);
+
+//$imgs = getAllImageForACampaign();
+
+
+$form->setMethod('post')
+    ->setAction($prefix.'/campaigns/index/edit/id/'.$this->id)
+	->setAttrib('id', 'campaign')
+	->setAttrib('campaign',$this->id);
+	
+	//$form->setCompanies($this->companies); //$this->view->campaigns
+	
+	//var_dump($this->images);
+	
+	$this->form->setCompany($this->company_id); //$this->view->campaigns
+	$form->setImages($this->images); //$this->view->campaigns
+	$form->_init(); //$this->view->campaigns
+	
+//var_dump($this->banner_id);
+$form->banner_id->setValue($this->banner_id);
+$form->skyscraper_id->setValue($this->skyscraper);
+$form->startdate->setValue($this->startdate);
+$form->enddate->setValue($this->enddate);
+$form->title->setValue($this->camptitle);
+$form->description->setValue($this->description);
+$form->clickthroughurl->setValue($this->clickthroughurl);
+$form->clickthroughurl_B->setValue($this->clickthroughurl_B);
+$form->useforalerts->setValue($this->useforalerts);
+$form->usefornewsletter->setValue($this->usefornewsletter);
+//$form->company->setValue($this->company);
+
+echo $form;
+
+
+
+?>
+
+
+

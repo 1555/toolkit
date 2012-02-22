@@ -1,0 +1,30 @@
+<?php
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+$id = $this->id;
+
+$this->form->setMethod('post')->setAction($prefix.'/alerts/index/editpromo/id/'.$id)->setAttrib('id', 'promo');
+ //$this->view->campaigns /$images
+$this->form->setImages($this->images); //$this->view->campaigns
+$this->form->_init(); //$this->view->campaigns	
+
+
+
+$this->form->promotitle->setValue($this->promotitle);
+$this->form->promocontent->setValue($this->promocopy);
+$this->form->link->setValue($this->promoLink);
+$this->form->image_id->setValue($this->image_id);
+echo $this->form;
+
+
+
+
+
+//<?php  echo $prefix ?>
+<a href="<?php  echo $prefix ?>/alerts/index/preview/?keepThis=true&TB_iframe=true&height=900&width=595" class="thickbox">Previews</a> 
+
+
+
+
+

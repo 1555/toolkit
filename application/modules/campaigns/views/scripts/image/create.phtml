@@ -1,0 +1,21 @@
+<?php
+
+
+
+
+
+$this->form->setMethod('post')
+    ->setAction('/tool/public/campaigns/index/create')
+	->setAttrib('id', 'campaign');
+ 
+$this->form->setCompanies($this->companies); //$this->view->campaigns
+$this->form->_init(); //$this->view->campaigns
+
+echo $this->form;
+
+
+
+?> 
+
+
+

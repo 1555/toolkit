@@ -1,0 +1,29 @@
+<?php
+
+
+
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+
+$this->form->setMethod('post')
+    ->setAction($prefix.'/alerts/index/create')
+	->setAttrib('id', 'alert');
+	
+ //var_dump($this->form);
+$this->form->setCampaigns($this->campaigns); //$this->view->campaigns
+//$this->form->setPrefix(APPLICATION_SUBDOMAIN); //$this->view->campaigns
+$this->form->setPromos($this->promos); //$this->view->campaigns
+$this->form->_init(); //$this->view->campaigns
+
+echo $this->form;
+//<?php  echo $prefix ?>
+<a href="<?php  echo $prefix ?>/alerts/index/preview/?keepThis=true&TB_iframe=true&height=900&width=595" class="thickbox">Preview</a>
+
+
+
+
+
+ 
+
+
+

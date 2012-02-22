@@ -1,0 +1,59 @@
+<?php
+
+
+
+class Stocks_Model_DbTable_Stocks extends Zend_Db_Table_Abstract
+{
+public $db;
+public $conn;
+	
+	public function __construct(){
+	
+		
+		$this->db = cnbc_Db::getAdapter(Zend_Registry::get('config')->stocks->resources->db); 
+		
+	}
+	
+	public function getAllStocks(){
+		
+		$sql = "SELECT * FROM INDEXS";
+		$result = $this->db->query($sql);
+    	$rows = $result->fetchAll();
+		$result->closeCursor();
+		return $rows;
+		//return "hithere";
+		
+		
+	}
+	
+	// get all stocks by index
+	
+	// add manhy stocks
+	
+	private function insertStocks($stocks){
+	  //var_dump($images);
+		for($i = 1;$i < count($stocks); $i++){ // 1 becuase of the placement div
+			var_dump($stocks[$i]);
+			
+			$this->insertStock($stocks[$i]);
+			
+		}
+	}
+	
+	public function insertStock($stock){
+			$displayname = $stocks['displayname'];
+			$symbol = $stocks['symbol'];
+			$index = $stocks['index'];
+			$sql = "INSERT INDEXES (displayname, symbol, index) VALUES ( '$displayname', '$symbol', '$index')";
+			$result = $this->db->query($sql);
+			//var_dump($result);
+	}
+	// get single stock
+	
+	// add stock (to an index)
+	
+	// remove stock (from an index)
+	
+	
+    
+}

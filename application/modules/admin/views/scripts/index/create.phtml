@@ -1,0 +1,22 @@
+
+
+
+<?php
+
+
+//$prefix =  $this->baseUrl();
+
+$prefix =  $_SERVER['SCRIPT_NAME'];
+
+
+$this->form->setMethod('post')
+    ->setAction($prefix.'/admin/index/create')
+	->setAttrib('id', 'admins');
+	
+
+echo $this->form;
+
+
+
+?> 
+

@@ -1,0 +1,13 @@
+<?php
+
+
+
+    $form = new Stocks_Forms_Stocks();
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+$form->setMethod('post')
+      ->setAction($prefix.'/stocks/index/create')
+	->setAttrib('id', 'stock');
+?>
+
+<?php echo $form ?>

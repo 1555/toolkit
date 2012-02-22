@@ -1,0 +1,30 @@
+<?php
+$pageTitle = $this->escape(stripslashes($this->pageTitle));
+if (!$form = $this->form) {
+    require_once APPLICATION_PATH . '/modules/campaigns/forms/CampaignEdit.php';
+    $form = new Campaigns_Form_Campaign_Edit();
+}
+
+
+
+$form->title->setValue($this->title);
+$form->alt->setValue($this->alt);
+$form->description->setValue($this->description);
+//$form->datemodified->setValue($this->datemodified);
+
+
+
+
+$form->setMethod('post')
+    ->setAction('/source/public/campaigns/index/edit/id/'.$this->id)
+	->setAttrib('id', 'campaign');
+	
+	
+ 
+
+echo $form;
+
+
+
+?>
+

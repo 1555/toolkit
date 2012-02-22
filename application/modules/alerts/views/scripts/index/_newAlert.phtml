@@ -1,0 +1,15 @@
+<?php
+
+
+ require_once APPLICATION_PATH . '/form/Venue.php';
+    $form = new Alerts_Forms_Alert();
+//$prefix =  $this->baseUrl();
+	  $prefix =  $_SERVER['SCRIPT_NAME'];
+$form->setMethod('post')
+      ->setAction($prefix.'/alerts/index/edit/id/'.$this->pollid)
+	->setAttrib('id', 'venue');
+?>
+
+<p>Add a new venue by entering relevant information in the text area below.</p>
+<?php echo $form ?>
+
